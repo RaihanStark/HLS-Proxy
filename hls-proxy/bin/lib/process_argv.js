@@ -160,7 +160,7 @@ if (typeof argv_vals["-v"] !== "number") argv_vals["-v"] = 0;
 
 const bootstrap_server = function (start_server) {
   start_server({
-    host: argv_vals["--host"],
+    host: process.env.HOST_SERVER,
     port: process.env.PORT,
     req_headers: argv_vals["--req-headers"],
     req_options: argv_vals["--req-options"],
